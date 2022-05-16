@@ -8,7 +8,11 @@ class ListViewScreenOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("ListViewScreenOne")),
+      appBar: AppBar(
+        title: const Text("ListViewScreenOne"),
+        elevation: 0,
+        backgroundColor: Colors.indigo,
+      ),
       body: ListView(
         children: [
           ...options
