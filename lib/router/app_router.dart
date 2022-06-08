@@ -30,6 +30,11 @@ class AppRouter {
         icon: Icons.car_rental,
         routeName: 'cards',
         screen: const CardScreen()),
+    MenuOptions(
+        label: 'Avatar Screen',
+        icon: Icons.supervised_user_circle_outlined,
+        routeName: 'avatar',
+        screen: const AvatarScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
