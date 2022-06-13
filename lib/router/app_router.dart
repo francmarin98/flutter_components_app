@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 class AppRouter {
   static const initialRoute = 'home';
   static final menuOptions = <MenuOptions>[
-    MenuOptions(
-        label: 'Home Screen',
-        icon: Icons.home_max_outlined,
-        routeName: 'home',
-        screen: const HomeScreen()),
+    // MenuOptions(
+    //     label: 'Home Screen',
+    //     icon: Icons.home_max_outlined,
+    //     routeName: 'home',
+    //     screen: const HomeScreen()),
     MenuOptions(
         label: 'List Wiew Screen One',
         icon: Icons.add_link_outlined,
@@ -35,10 +35,17 @@ class AppRouter {
         icon: Icons.supervised_user_circle_outlined,
         routeName: 'avatar',
         screen: const AvatarScreen()),
+    MenuOptions(
+        label: 'Animated Screen',
+        icon: Icons.animation,
+        routeName: 'animated',
+        screen: const AnimatedScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+
+    appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
 
     for (final option in menuOptions) {
       appRoutes
