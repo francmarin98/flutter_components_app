@@ -5,11 +5,6 @@ import 'package:flutter/material.dart';
 class AppRouter {
   static const initialRoute = 'home';
   static final menuOptions = <MenuOptions>[
-    // MenuOptions(
-    //     label: 'Home Screen',
-    //     icon: Icons.home_max_outlined,
-    //     routeName: 'home',
-    //     screen: const HomeScreen()),
     MenuOptions(
         label: 'List Wiew Screen One',
         icon: Icons.add_link_outlined,
@@ -40,6 +35,11 @@ class AppRouter {
         icon: Icons.animation,
         routeName: 'animated',
         screen: const AnimatedScreen()),
+    MenuOptions(
+        label: 'Inputs Screen',
+        icon: Icons.input_outlined,
+        routeName: 'input',
+        screen: const InputsScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -59,7 +59,3 @@ class AppRouter {
     return MaterialPageRoute(builder: (context) => const ListViewScreenTwo());
   }
 }
-
-
-
-  // 'homescreen': (BuildContext context) => const HomeScreen(),

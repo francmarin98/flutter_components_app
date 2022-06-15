@@ -26,5 +26,38 @@ class AppTheme {
           style: ElevatedButton.styleFrom(
               primary: colorPrimary,
               shape: const StadiumBorder(),
-              elevation: 0)));
+              elevation: 0
+          )
+      )
+      ,
+      inputDecorationTheme: const InputDecorationTheme(
+        floatingLabelStyle: TextStyle(color: colorPrimary),
+        
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: colorPrimary),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10),
+            topRight: Radius.circular(10)
+          )
+        ),
+
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: colorPrimary),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10),
+            topRight: Radius.circular(10)
+          )
+        ),
+
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                  topLeft: Radius.circular(10)
+          )
+        )
+
+
+      ));
 }
