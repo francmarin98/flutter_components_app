@@ -9,15 +9,20 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType? keywordType;
   final bool isPassword;
 
+  final String formProperty;
+  final Map<String, dynamic> formValues;
+
   const CustomTextFormField({
     Key? key,
     this.hintText,
     this.labelText,
     this.helperText,
     this.icon,
-    this.suffixIcon, 
-    this.keywordType, 
-    this.isPassword = false,
+    this.suffixIcon,
+    this.keywordType,
+    this.isPassword = false, 
+    required this.formProperty, 
+    required this.formValues,
   }) : super(key: key);
 
   @override
@@ -29,7 +34,7 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keywordType,
       obscureText: isPassword,
       onChanged: (value) {
-        print(value);
+        formValues[formProperty] = value;
       },
       validator: (value) {
         if (value == null) {
