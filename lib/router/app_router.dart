@@ -45,6 +45,11 @@ class AppRouter {
         icon: Icons.slow_motion_video_outlined,
         routeName: 'slider',
         screen: const SliderScreen()),
+    MenuOptions(
+        label: 'Infinite Scroll & Pull to refresh',
+        icon: Icons.catching_pokemon,
+        routeName: 'listviewbuilder',
+        screen: const ListViewBuilderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
